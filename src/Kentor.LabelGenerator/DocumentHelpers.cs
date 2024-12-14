@@ -49,7 +49,7 @@ namespace Kentor.LabelGenerator
                 XRect rectangle = CreateRectangle(contentPositionLeft, contentPositionTop, contentSize);
                 gfx.DrawRectangle(XPens.Transparent, rectangle); // Transparent border
 
-                XFont font = new XFont(settings.FontFamily, settings.FontSize, XFontStyle.Bold);
+                XFont font = new XFont(settings.FontFamily, settings.FontSize, XFontStyleEx.Bold);
                 var labelText = FormatLabelText(row, settings.MaxCharactersPerRow);
                 tf.DrawString(labelText, font, XBrushes.Black, rectangle, XStringFormats.TopLeft);
 

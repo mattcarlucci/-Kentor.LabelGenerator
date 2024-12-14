@@ -8,6 +8,7 @@ using FluentAssertions;
 using System.IO;
 using Kentor.LabelGenerator.Models;
 using System.ComponentModel.DataAnnotations;
+using PdfSharp.Fonts;
 
 namespace Kentor.LabelGeneratorTests
 {
@@ -19,6 +20,8 @@ namespace Kentor.LabelGeneratorTests
         [TestInitialize]
         public void Init()
         {
+            GlobalFontSettings.UseWindowsFontsUnderWindows = true;
+
             var addressList = new List<string[]>();
             for (int i = 0; i < 30; i++)
             {
